@@ -49,6 +49,8 @@ void draw_rectangle (struct windri *w, int x, int y, int width, int height);
 void draw_rectangle_prop (struct windri *w, float x, float y, float width, float height);
 void draw_arc (struct windri *w, int x, int y, int width, int height, int arc_start_angle, int arc_end_angle);
 void draw_arc_prop (struct windri *w, float x, float y, float width, float height, int arc_start_angle, int arc_end_angle);
+void fill_rectangle (struct windri *w, int x, int y, int width, int height);
+void fill_rectangle_prop (struct windri *w, float x, float y, float width, float height);
 
 void window_clear (struct windri *w, int x, int y, int width, int height);
 void window_clear_prop (struct windri *w, float x, float y, float width, float height);

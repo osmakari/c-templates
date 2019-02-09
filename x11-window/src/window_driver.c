@@ -182,6 +182,16 @@ void draw_arc (struct windri *w, int x, int y, int width, int height, int arc_st
 void draw_arc_prop (struct windri *w, float x, float y, float width, float height, int arc_start_angle, int arc_end_angle) {
     XDrawArc(w->display, w->win, w->gc, x * w->window_width, y * w->window_height, width * w->window_width, height * w->window_height, arc_start_angle, arc_end_angle);
 }
+
+void fill_rectangle (struct windri *w, int x, int y, int width, int height) {
+    XFillRectangle(w->display, w->win, w->gc, x, y, width, height);
+} 
+
+// Proportional 0f-1f
+void fill_rectangle_prop (struct windri *w, float x, float y, float width, float height) {
+    XFillRectangle(w->display, w->win, w->gc, x * w->window_width, y * w->window_height, width * w->window_width, height * w->window_height);
+}
+
 void window_clear (struct windri *w, int x, int y, int width, int height) {
      XClearArea(w->display, w->win, x, y, width, height, False);
 }
