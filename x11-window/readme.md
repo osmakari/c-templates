@@ -1,6 +1,6 @@
 # x11-window
 
-Window library for easier window management
+Window template (with interface)
 
 ## Dependencies
 

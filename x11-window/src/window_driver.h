@@ -1,3 +1,6 @@
+#ifndef WINDOW_DRIVER_H
+#define WINDOW_DRIVER_H
+
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xos.h>
@@ -44,5 +47,12 @@ void draw_text (struct windri *w, int x, int y, const char *text);
 void draw_text_prop (struct windri *w, float x, float y, const char *text);
 void draw_rectangle (struct windri *w, int x, int y, int width, int height);
 void draw_rectangle_prop (struct windri *w, float x, float y, float width, float height);
+void draw_arc (struct windri *w, int x, int y, int width, int height, int arc_start_angle, int arc_end_angle);
+void draw_arc_prop (struct windri *w, float x, float y, float width, float height, int arc_start_angle, int arc_end_angle);
+
+void window_clear (struct windri *w, int x, int y, int width, int height);
+void window_clear_prop (struct windri *w, float x, float y, float width, float height);
 
 int get_mouse (struct windri *w);
+
+#endif
